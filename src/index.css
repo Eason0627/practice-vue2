@@ -1,0 +1,106 @@
+html,
+body,
+#app {
+  height: 100%;
+}
+
+a {
+  text-decoration: none!important;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+::selection {
+  color: #fff;
+  background: #4fcca2;
+}
+
+.router-link-active {
+  position: relative;
+  background: #384a52;
+}
+
+.router-link-active::after {
+  position: absolute;
+  top: 10px;
+  content: '';
+  display: block;
+  width: 5px;
+  height: 30px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+aside .router-link-active::after {
+  right: 10px;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: all 0.4s;
+}
+.fade-enter, .fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.page-link {
+  z-index: 0 !important;
+}
+
+@media screen and (max-width: 960px) {
+  .sentence {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  .sentence {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .logo {
+    margin: 0 auto;
+  }
+  .user {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  aside {
+    position: absolute;
+    /* left: -180px; */
+    z-index: 100;
+  }
+  aside ul li a {
+    padding-right: 30px;
+    text-align: right;
+  }
+  main {
+    width: 100%!important;
+  }
+
+  main>.header {
+    position: fixed;
+    width: 100%;
+  }
+
+  main>.indexBox,
+  main>.artBox,
+  main>.putArt,
+  main>.setting,
+  main>.message {
+    margin-top: 80px!important;
+  }
+}
